@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: local("Roboto"), url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: local("Roboto"), url(./assets/fonts/Roboto-Medium.ttf) format("truetype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  box-sizing: border-box;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+#root {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.results {
+  height: 100%;
+  width: 100%;
+  padding-top: 86px;
+  max-width: 1024px;
+  margin: 0px auto;
+}
+.list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 24px 20px;
+}
+.img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.item {
+  width: 240px;
+  height: 240px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.12) 0px 3px 4px, rgba(0, 0, 0, 0.14) 0px 2px 4px;
+  border-radius: 4px;
+  list-style: none;
+}
+.item-img {
+  height: 70%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.item-description {
+  height: 30%;
+  padding: 12px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  margin: 0rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.gender {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0rem;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.6);
 }
