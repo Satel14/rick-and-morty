@@ -7,6 +7,7 @@ import Search from './components/Search'
 import Banner from './components/Banner'
 import Details from './components/Details'
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import Login from './components/GoogleLogin';
 
 function App() {
   const [data, setData] = useState({ results: [] })
@@ -45,6 +46,9 @@ function App() {
         <Route path="/details/:id" element={<Details />} />
         <Route path="/" element={<div className="results">
           <Banner />
+          <div className='g-signin'>
+            <Login />
+          </div>
           <Search query={query} setQuery={setQuery} />
           <ul className='list'>
             {sortedData?.map((item) => (
